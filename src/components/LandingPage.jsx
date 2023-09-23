@@ -1,12 +1,14 @@
 import React from 'react';
 
 import '../App.css';
-import CreateContentForm from './CreateContentForm'
+
+import BlockList from './BlogList';
+import CreateContentForm from './CreateContentForm';
 
 const LandingPage = () => {
       return (
         <div className="App">
-            this is our landing page
+            <BlockList title="Featured Posts"/>
             <CreateContentForm />
         </div>
       );
