@@ -7,19 +7,24 @@ import LandingPage from './components/LandingPage';
 import AboutPage from './components/AboutPage';
 import Blog from './components/Blog';
 import CreateContentPage from './components/CreateContentPage';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/create-content" element={<CreateContentPage />} />
+    <>
+    <NavBar />
+      <Router>
+        <Routes>
+          
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/create-content" element={<CreateContentPage />} />
 
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+      
+    </>
   );
 }
 

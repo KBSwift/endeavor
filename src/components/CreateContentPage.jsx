@@ -2,12 +2,12 @@ import React from 'react';
 
 import '../App.css';
 import CreateContentForm from "./CreateContentForm";
+import NavBar from "./NavBar";
 
 const CreateContentPage = () => {
     return (
        <> 
-       <NavBar />
-            <CreateContentForm />
+         <CreateContentForm />
        </>
     );
   }
