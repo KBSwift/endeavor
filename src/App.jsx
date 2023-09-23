@@ -1,31 +1,24 @@
-import { useState } from 'react'
+
+
 
 import './App.css'
-import TestBootstrap from './components/BootstrapTest'
-import Input from './components/Input'
-import CreateContentForm from './components/CreateContentForm'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import AboutPage from './components/AboutPage';
+import Blog from './components/Blog';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Router>
+      <Routes>
+        
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<Blog />} />
 
-      <p className="read-the-docs">
-
-        <Input label="email"/>
-      </p>
-      <div>
-        <CreateContentForm />
-      </div>
-
-
-      <div className="container">
-        <h1>Testing Bootstrap</h1>
-        <TestBootstrap  />
-      </div>
-    </>
-  )
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
