@@ -6,7 +6,7 @@ import CreateContentForm from "./CreateContentForm";
 const CreateContentPage = () => {
     return (
        <> 
-       <nav>Nav Component to go here</nav>
+       <NavBar />
             <CreateContentForm />
        </>
     );
