@@ -1,7 +1,12 @@
 label {
-
+    margin: 8px;
 }
 
 input {
+    border: 1px solid black;
+    width: 100%;
+}
+
+#Content {
     
 }

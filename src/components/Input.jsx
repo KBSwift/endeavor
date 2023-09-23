@@ -3,10 +3,11 @@ import styles from './Input.module.css';
 const Input = ({label, type}) => {
     return (
        <> 
-            <label for="textInput">
+            <label>
                 {label}
+                <input type={type} id={label}></input>
             </label><br></br>
-            <input type={type}></input>
+            
        </>
     );
   }

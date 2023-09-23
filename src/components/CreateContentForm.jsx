@@ -1,12 +1,14 @@
+import Button from "./Button";
 import Input from "./Input";
 
 const CreateContentForm = () => {
     return (
        <> 
             <form>
-                <h4>Create Content Form</h4>
-                <Input label="Title" type="text"/>
-                <Input label="Description" type="file"/>
+                <h4>Create Your Content</h4>
+                <Input label="Title" type="text"/><br></br>
+                <Input label="Content" type="file"/><br></br>
+                <Button text="Submit" type="submit"/>
             </form>
        </>
     );
