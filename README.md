@@ -17,7 +17,7 @@ Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
 1.   Sammie Rosado  || samantha.mendez@vmlyr.com || sammierosado
 2.   Kavin Moreno  || kavinmoreno@gmail.com || KBSwift
 3.   Angela Mitchell  || angela.mitchell@vmlyr.com || angela-mitchell-vmlyr || anglarenmit@gmail.com || amitchell05
-4.   **Full Name**  || **fullname@company.com**  (or fullname@school.edu if you're a CS student) || **Github Username**
+4.   Elizabeth Beckerle  || elzbthyorke@gmail.com || ebeckerle
 
 <br /><br />
 
