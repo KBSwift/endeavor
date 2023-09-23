@@ -5,8 +5,8 @@ const CreateContentForm = () => {
        <> 
             <form>
                 <h4>Create Content Form</h4>
-                <Input label="Title"/>
-                <Input label="Description"/>
+                <Input label="Title" type="text"/>
+                <Input label="Description" type="file"/>
             </form>
        </>
     );

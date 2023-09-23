@@ -1,12 +1,12 @@
 import styles from './Input.module.css';
 
-const Input = ({label}) => {
+const Input = ({label, type}) => {
     return (
        <> 
             <label for="textInput">
                 {label}
             </label><br></br>
-            <input type="text"></input>
+            <input type={type}></input>
        </>
     );
   }
