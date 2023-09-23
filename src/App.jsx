@@ -1,26 +1,23 @@
-import { useState } from 'react'
 
 
 
 import './App.css'
-import TestBootstrap from './components/BootstrapTest'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import AboutPage from './components/AboutPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Router>
+      <Routes>
+        
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        
 
-      <p className="read-the-docs">
-        jello world
-      </p>
-
-      <div className="container">
-        <h1>Testing Bootstrap</h1>
-        <TestBootstrap  />
-      </div>
-    </>
-  )
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
