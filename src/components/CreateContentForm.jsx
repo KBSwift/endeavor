@@ -12,4 +12,4 @@ const CreateContentForm = () => {
     );
   }
   
-  export default Input;
+  export default CreateContentForm;
