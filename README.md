@@ -1,6 +1,10 @@
 # Welcome to Hack Midwest 2023!
 <br /><br />
 
+## How to run this project
+npm install in root directory
+Use npm run dev to start
+
 
 ## Getting Started
 Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
