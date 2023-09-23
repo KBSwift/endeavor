@@ -14,10 +14,10 @@ Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
 ## Who's on your team?
 *List the full names,  email address & Github username of your teammates*
 
-1.   **Full Name**  || **fullname@company.com**  (or fullname@school.edu if you're a CS student) || **Github Username**
-2. 
-3.
-4.
+1.   Sammie Rosado  || samantha.mendez@vmlyr.com || sammierosado
+2.   Kavin Moreno  || kavinmoreno@gmail.com || KBSwift
+3.   **Full Name**  || **fullname@company.com**  (or fullname@school.edu if you're a CS student) || **Github Username**
+4.   **Full Name**  || **fullname@company.com**  (or fullname@school.edu if you're a CS student) || **Github Username**
 5.
 
 <br /><br />
@@ -43,7 +43,3 @@ Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
 - [ ]  College Challenge (only for teams of up to 5 CS students from the same school)
 
 <br /><br />
-
-
-
-
