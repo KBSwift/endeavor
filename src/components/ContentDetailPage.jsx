@@ -18,6 +18,7 @@ const ContentDetailPage = () => {
     <article>
       <h2>{content.title}</h2>
       <img src={content.image} alt={content.altText} />
+      <p>{content.description}</p>
     </article>
   );
 }
