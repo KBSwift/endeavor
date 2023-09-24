@@ -1,0 +1,29 @@
+.custom-footer {
+    background-color: #0A014F;
+    color: white;
+    padding: 2rem 0;
+}
+
+.custom-footer h5 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.custom-footer a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.custom-footer a:hover {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.custom-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.custom-footer ul li {
+    margin-bottom: 0.5rem;
+}
