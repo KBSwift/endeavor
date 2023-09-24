@@ -107,7 +107,8 @@ const PinTextFileComponent = () => {
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label" htmlFor="fileInput">Or choose a text file:</label>
+                    <label className="form-label" htmlFor="fileInput"></label>
+                    <p><br />Or choose a text file:</p>
                     <input 
                         type="file" 
                         id="fileInput"
