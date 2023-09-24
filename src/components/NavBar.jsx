@@ -36,7 +36,7 @@ const Navbar = () => {
                 {/* <div className="ml-5"> */}
                 <div className="ml-auto">
                     <button className="btn btn-primary rounded-pill mx-2" style={{ backgroundColor: 'white', borderColor: 'blue', color: 'blue' }}>Log In</button>
-                    <a href="/create-content" className="btn btn-success rounded-pill" style={{ backgroundColor: 'blue' }}>AI Me</a>
+                    <a href="/ai-me" className="btn btn-success rounded-pill" style={{ backgroundColor: 'blue' }}>AI Me</a>
                 </div>
             </div>
         </nav>
