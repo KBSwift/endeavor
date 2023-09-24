@@ -42,7 +42,7 @@ By converting content into NFTs, we are not only providing a way to prove authen
 *See hackmidwest.com/#prizes for challenge details*
 - [x]  Pinata Web3 Challenge
 - [x]  Pinata Challenge
-- [x]  Pinata ERC-6551 Challenge
+- [ ]  Pinata ERC-6551 Challenge
 - [ ]  Okta Challenge
 - [ ]  GEHA Generative AI Emergency Response Challenge
 - [ ]  Corporate Challenge (only for official company teams)
