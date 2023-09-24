@@ -10,7 +10,6 @@ import ContentDetailPage from './components/ContentDetailPage';
 import ArtGalleryPage from './components/ArtGalleryPage';
 import Chatbot from './components/Chatbot';
 import Footer from './components/Footer';
-import Footer from './components/Footer';
 
 function App() {
   return (
