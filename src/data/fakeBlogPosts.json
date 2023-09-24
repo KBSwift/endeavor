@@ -1,0 +1,29 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Introduction to Machine Learning",
+        "author": "Jane Smith",
+        "date": "2023-09-20",
+        "tags": ["Machine Learning", "Introduction", "AI"],
+        "content": "Machine Learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy."
+      },
+      {
+        "id": 2,
+        "title": "How Chatbots Work",
+        "author": "John Doe",
+        "date": "2023-09-21",
+        "tags": ["Chatbots", "AI", "Natural Language Processing"],
+        "content": "Chatbots are a type of software that can engage in conversations with humans. They can be simple, following a predefined set of rules, or more advanced, utilizing natural language processing to understand and respond to user prompts."
+      },
+      {
+        "id": 3,
+        "title": "Future of Virtual Reality",
+        "author": "Alice Johnson",
+        "date": "2023-09-22",
+        "tags": ["Virtual Reality", "Tech Trends", "Future"],
+        "content": "Virtual Reality (VR) is changing how we interact with content and the world around us. From gaming to professional training, the potential applications of VR are vast and promising."
+      }
+    ]
+  }
+  
