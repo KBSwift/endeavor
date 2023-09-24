@@ -24,10 +24,10 @@ const Navbar = () => {
                             <a className="nav-link" href="/blog-posts">View Posts</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">About Us</a>
+                            <a className="nav-link" href="/art-gallery">Art Gallery</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/art-gallery">Art Gallery</a>
+                            <a className="nav-link" href="/about">About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -36,7 +36,8 @@ const Navbar = () => {
                 {/* <div className="ml-5"> */}
                 <div className="ml-auto">
                     <button className="btn btn-primary rounded-pill mx-2" style={{ backgroundColor: 'white', borderColor: 'blue', color: 'blue' }}>Log In</button>
-                    <a href="/create-content" className="btn btn-success rounded-pill" style={{ backgroundColor: 'blue' }}>Start Writing</a>                </div>
+                    <a href="/create-content" className="btn btn-success rounded-pill" style={{ backgroundColor: 'blue' }}>AI Me</a>
+                </div>
             </div>
         </nav>
     );
