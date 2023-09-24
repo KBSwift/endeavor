@@ -9,6 +9,7 @@ import ContentListingPage from './components/ContentListingPage';
 import ContentDetailPage from './components/ContentDetailPage';
 import ArtGalleryPage from './components/ArtGalleryPage';
 import Chatbot from './components/Chatbot';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             </Routes>
           </Router>
       </main>
+      <Footer/>
     </>
   );
 }

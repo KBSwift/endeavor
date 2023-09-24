@@ -7,6 +7,7 @@ import { PostsContext } from '../contexts/Contexts';
 import ContentList from './ContentList';
 import Hero from './Hero';
 import FakeBlogPostsList from './FakeBlogPostsList';
+import HeaderBox from './HeaderBox';
 
 const LandingPage = () => {
   const posts = useContext(PostsContext);
@@ -20,6 +21,7 @@ const LandingPage = () => {
 
   return (
     <>
+    <HeaderBox/>
     <FakeBlogPostsList/>
         {/* <Hero content={heroProps} />
         <ContentList title="Featured Posts" posts={posts}/> */}
