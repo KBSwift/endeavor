@@ -7,6 +7,7 @@ import CreateContentPage from './components/CreateContentPage';
 import NavBar from './components/NavBar';
 import ContentListingPage from './components/ContentListingPage';
 import ContentDetailPage from './components/ContentDetailPage';
+import ArtGalleryPage from './components/ArtGalleryPage';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
                 <Route path="/blog-posts" element={<ContentListingPage />} />
                 <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
                 <Route path="/create-content" element={<CreateContentPage />} />
+                <Route path="/art-gallery" element={<ArtGalleryPage />} />
+
             </Routes>
           </Router>
       </main>
