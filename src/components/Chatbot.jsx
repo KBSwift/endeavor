@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import OpenAIApi from 'openai';
+import axios from 'axios';
 
 function Chatbot() {
     const [messages, setMessages] = useState([]);
@@ -14,7 +14,7 @@ function Chatbot() {
         if (messages.length === 0 && typingIndex < greetingMessage.length) {
             const timer = setTimeout(() => {
                 setTypingIndex(prevIndex => prevIndex + 1);
-            }, 50);
+            }, 25);
             return () => clearTimeout(timer);
         }
         if (isBotTyping && typingIndex < typingContent.length) {
@@ -30,14 +30,23 @@ function Chatbot() {
     }, [typingIndex, isBotTyping]);
 
     const handleSend = async () => {
-        setMessages(prevMessages => [...prevMessages, { text: userInput, type: 'user' }]);
-        setUserInput('');
-
-        // You should replace this mock response with an actual API call to OpenAI.
-        const botResponse = "Hello! I'm a bot response.";
-        setTypingContent(botResponse);
-        setIsBotTyping(true);
-        setTypingIndex(0);
+        try {
+            const currentMessages = [...messages, { text: userInput, type: 'user' }];
+            setMessages(currentMessages);
+            setUserInput('');
+    
+            const response = await axios.post('http://localhost:5000/ask', {
+                messages: currentMessages.map(msg => ({ role: msg.type, content: msg.text }))
+            });
+    
+            const assistantMessage = response.data.choices[0].message.content;
+            
+            setTypingContent(assistantMessage);
+            setIsBotTyping(true);
+            setTypingIndex(0);
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
