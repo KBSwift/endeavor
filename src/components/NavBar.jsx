@@ -1,4 +1,3 @@
-// Navbar.js
 import React from 'react';
 
 const Navbar = () => {
@@ -23,10 +22,10 @@ const Navbar = () => {
                             <a className="nav-link" href="/">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">About</a>
+                            <a className="nav-link" href="/create-content">Create Content</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/contact">Contact</a>
+                            <a className="nav-link" href="/blog-posts">View Posts</a>
                         </li>
                     </ul>
                 </div>
