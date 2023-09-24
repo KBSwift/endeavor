@@ -12,17 +12,22 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <>
-    <NavBar />
-      <Router>
-        <Routes>
-          
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/create-content" element={<CreateContentPage />} />
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Router>
+            <Routes>
+              
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/create-content" element={<CreateContentPage />} />
 
-        </Routes>
-      </Router>
+            </Routes>
+          </Router>
+      </main>
+    
       
     </>
   );
