@@ -6,6 +6,7 @@
 2. Use npm run dev to start
 
 
+
 ## Getting Started
 Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
 1. Clone this repository and rename to the name of your app or idea
