@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; 
+import PinFileComponent from './PinFileComponent';
 
 const Blog = () => {
 
@@ -43,7 +44,7 @@ const Blog = () => {
 
                 <button type="submit">Submit</button>
             </form>
-            
+            <PinFileComponent />
         </div>
     );
 }

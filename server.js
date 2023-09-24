@@ -1,7 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const FormData = require('form-data');
+const fs = require('fs');
 
 dotenv.config();
 
@@ -30,6 +33,37 @@ app.get('/testPinataAuth', async (req, res) => {
 app.get('/', (req, res) => {
     res.send('Server is up and running!');
 });
+
+const pinFileToIPFS = async () => {
+    const formData = new FormData();
+    const src = 'C:\\Users\\sammi\\OneDrive\\Desktop\\tenor.gif';
+    
+    const file = fs.createReadStream(src)
+    formData.append('file', file)
+    
+    const pinataMetadata = JSON.stringify({
+      name: 'DMG gif', 
+    });
+    formData.append('pinataMetadata', pinataMetadata);
+    
+    const pinataOptions = JSON.stringify({
+      cidVersion: 0,
+    })
+    formData.append('pinataOptions', pinataOptions);
+
+    try{
+      const res = await axios.post("https://api.pinata.cloud/pinning/pinFileToIPFS", formData, {
+        maxBodyLength: "Infinity",
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'authorization': `Bearer ${process.env.PINATA_JWT}`
+        }        
+      });
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+}
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
