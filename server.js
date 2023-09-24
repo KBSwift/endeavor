@@ -36,50 +36,40 @@ app.get('/', (req, res) => {
 const upload = multer({ storage: multer.memoryStorage() }); // store the file in memory
 
 app.post('/pinFileToServer', upload.fields([{ name: 'file' }, { name: 'image' }]), async (req, res) => {
-    if (!req.files.file) {
-        return res.status(400).send('No file uploaded');
-    }
-
-    const formData = new FormData();
-    formData.append('file', req.files.file[0].buffer, {
-        filename: req.files.file[0].originalname,
-        contentType: req.files.file[0].mimetype
-    });
-
-    // Check and append the image if present
-    if (req.files.image) {
-        formData.append('image', req.files.image[0].buffer, {
-            filename: req.files.image[0].originalname,
-            contentType: req.files.image[0].mimetype
-        });
-    }
-    
-    const pinataMetadata = {
-        name: 'BlogPostContent',
-        keyvalues: {
-            author: req.body.author || 'AuthorName', // Default to 'AuthorName' if no author provided
-            date: req.body.date || new Date().toISOString(), // Default to current date if none provided
-            tags: req.body.tags || '' // Default to empty string if no tags provided
-        }
-    };
-    formData.append('pinataMetadata', JSON.stringify(pinataMetadata));
-
-    const pinataOptions = {
-        cidVersion: 0
-    };
-    formData.append('pinataOptions', JSON.stringify(pinataOptions));
-
     try {
-        const pinataResponse = await axios.post("https://api.pinata.cloud/pinning/pinFileToIPFS", formData, {
+        const formData = new FormData();
+        formData.append('file', req.files['file'][0].buffer, req.files['file'][0].originalname);
+        if (req.files['image']) {
+            formData.append('image', req.files['image'][0].buffer, req.files['image'][0].originalname);
+        }
+
+        const pinataMetadata = {
+            name: 'BlogPostContent',
+            keyvalues: {
+                author: req.body.author || 'AuthorName',
+                date: req.body.date || new Date().toISOString(),
+                tags: req.body.tags || ''
+            }
+        };
+        formData.append('pinataMetadata', JSON.stringify(pinataMetadata));
+
+        const pinataOptions = {
+            cidVersion: 0
+        };
+        formData.append('pinataOptions', JSON.stringify(pinataOptions));
+
+        const response = await axios.post("https://api.pinata.cloud/pinning/pinFileToIPFS", formData, {
             maxBodyLength: "Infinity",
             headers: {
-                'Content-Type': 'multipart/form-data; boundary=${formData._boundary}',
-                'Authorization': `Bearer ${process.env.PINATA_JWT}`           }
+                'Content-Type': `multipart/form-data; boundary=${formData._boundary}`,
+                'Authorization': `Bearer ${process.env.PINATA_JWT}`
+            }
         });
-        res.json(pinataResponse.data);
+
+        res.json(response.data);
     } catch (error) {
-        console.error('Error pinning file to IPFS:', error);
-        res.status(500).send('Error pinning file to IPFS');
+        console.error("Error pinning content to IPFS:", error);
+        res.status(500).send("Error pinning content to IPFS");
     }
 });
 
