@@ -26,7 +26,7 @@ function App() {
                 <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
                 <Route path="/create-content" element={<CreateContentPage />} />
                 <Route path="/art-gallery" element={<ArtGalleryPage />} />
-                <Route path="/chat-bot" element={<Chatbot />} />
+                <Route path="/ai-me" element={<Chatbot />} />
 
             </Routes>
           </Router>
