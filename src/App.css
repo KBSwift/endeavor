@@ -23,3 +23,22 @@
   --color-text-white: var(--color-white);
   --color-text-black: var(--color-black);
 }
+
+.custom-navbar {
+  background-color: var(--color-secondary);
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:focus, 
+.navbar-nav  {
+  color: #ffffff;
+  
+}
+
+.nav-link:hover {
+  scale: 110%;
+  color: #A8C5EB!important;
+}
