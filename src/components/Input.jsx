@@ -3,9 +3,11 @@ import styles from './Input.module.css';
 const Input = ({label, type}) => {
     if(type === "file"){
         return(
-            <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label">{label}</label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple></input>
+            <div className="mb-3">
+                <label className="form-label">
+                    {label}
+                    <input className="form-control" type="file" multiple></input>
+                </label>
             </div>
         );
     }

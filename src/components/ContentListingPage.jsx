@@ -1,19 +1,17 @@
 import { React, useContext } from 'react';
 
-// import '../App.css';
-
 import { PostsContext } from '../contexts/Contexts';
 
 import ContentList from './ContentList';
 
-const LandingPage = () => {
+const ContentListingPage = () => {
   const posts = useContext(PostsContext);
 
   return (
     <>
-        <ContentList title="Featured Posts" posts={posts}/>
+      <ContentList title="Posts" posts={posts} />
     </>
   );
 }
 
-export default LandingPage;
+export default ContentListingPage;
