@@ -4,7 +4,7 @@ import Card from './Card';
 
 const ContentList = ({title, posts}) => {
   const cards = posts.map(post => {
-    return <Card title={post.title} image={post.image} altText={post.altText} key={post.id} />;
+    return <Card post={post} key={post.id} />;
   });
 
   return (

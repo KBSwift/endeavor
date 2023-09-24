@@ -1,9 +1,13 @@
-const Card = ({title, image, altText}) => {
+import { Link } from "react-router-dom";
+
+const Card = ({post}) => {
   return (
-      <article> 
-        <h2>{title}</h2>
-        <img src={image} alt={altText} />
-      </article>
+    <article>
+      <Link to={`/blog-posts/detail/${post.id}`}>
+        <h2>{post.title}</h2>
+        <img src={post.image} alt={post.altText} />
+      </Link>
+    </article>
   );
 }
 
