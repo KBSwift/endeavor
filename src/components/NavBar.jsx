@@ -38,7 +38,7 @@ const Navbar = () => {
                     <button className="btn btn-primary rounded-pill mx-2" style={{ backgroundColor: 'white', borderColor: 'blue', color: 'blue' }}>Log In</button>
                     <a href="/ai-me" className="btn btn-success rounded-pill" id='ai-button'
                         style={{
-                            backgroundColor: '#B118C8', border: "#B118C8", fontSize: "large"
+                            backgroundColor: '#B118C8', border: "#B118C8", fontSize: "large", fontWeight: "bold", 
                         }}>AI Me</a>
                 </div>
             </div>
