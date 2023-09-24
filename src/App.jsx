@@ -9,6 +9,7 @@ import ContentListingPage from './components/ContentListingPage';
 import ContentDetailPage from './components/ContentDetailPage';
 import ArtGalleryPage from './components/ArtGalleryPage';
 import Chatbot from './components/Chatbot';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,20 +18,25 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <Router>
+        <body className='d-flex flex-column min-vh-100'>
+          <Router>
             <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog-posts" element={<ContentListingPage />} />
-                <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
-                <Route path="/create-content" element={<CreateContentPage />} />
-                <Route path="/art-gallery" element={<ArtGalleryPage />} />
-                <Route path="/ai-me" element={<Chatbot />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog-posts" element={<ContentListingPage />} />
+              <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
+              <Route path="/create-content" element={<CreateContentPage />} />
+              <Route path="/art-gallery" element={<ArtGalleryPage />} />
+              <Route path="/ai-me" element={<Chatbot />} />
 
             </Routes>
           </Router>
+        </body>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
