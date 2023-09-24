@@ -8,15 +8,11 @@ const ContentDetailPage = () => {
   // Get the id parameter from the URL
   const { id } = useParams();
 
-  console.log(typeof id);
-
   // Access the context data
   const posts = useContext(PostsContext);
 
   // Find the content item by id
   const content = posts.find((item) => item.id === Number(id)); 
-
-  console.log(content);
 
   return (
     <article>
