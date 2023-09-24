@@ -1,9 +1,9 @@
-import styles from './Button.module.css';
+import './Button.module.css';
 
-const Button = ({text, type}) => {
+const Button = ({text, type, className}) => {
    return (
       <> 
-         <button type={type}>{text}</button>
+         <button type={type} className={`btn ${className}`}>{text}</button>
       </>
    );
 }
