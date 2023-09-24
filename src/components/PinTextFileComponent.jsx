@@ -54,8 +54,7 @@ const PinTextFileComponent = () => {
         } catch (error) {
             console.error("Error pinning content to IPFS:", error);
         }
-    };
-    
+    };    
 
     return (
         <div className="card border-0 shadow-sm mt-4">
