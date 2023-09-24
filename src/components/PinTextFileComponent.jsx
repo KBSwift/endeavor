@@ -49,7 +49,7 @@ const PinTextFileComponent = () => {
 
                 <div className="mb-3">
                     <label className="form-label">Write your content:</label>
-                    <ReactQuill value={editorContent} onChange={setEditorContent} />
+                    <ReactQuill value={editorContent} onChange={setEditorContent} style={{ height : '300px'}} />
                 </div>
 
                 <div className="mb-3">
