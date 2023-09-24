@@ -32,43 +32,40 @@
   color: #ffffff;
 }
 
-.navbar-nav .nav-link:focus, 
-.navbar-nav  {
+.navbar-nav .nav-link:focus,
+.navbar-nav {
   color: #ffffff;
-  
+
 }
 
 .nav-link:hover {
   scale: 110%;
-  color: #A8C5EB!important;
+  color: #A8C5EB !important;
 }
 
-.chatbox {
-  max-width: 600px;
-  margin: 0 auto;
-  border: 1px solid #eee;
-  height: 400px;
-  overflow-y: auto;
-  padding: 20px;
+#ai-button:hover {
+  scale: 105%;
+  animation: shaking 0.5s infinite;
 }
 
-.chatbox::-webkit-scrollbar {
-  width: 10px;
-}
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
+  }
 
-.chatbox::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 5px;
-}
-.typing-cursor {
-  display: inline-block;
-  width: 0.5em;
-  height: 1em;
-  background-color: currentColor;
-  animation: blink 1s steps(2, start) infinite;
-}
+  20% {
+    transform: rotate(-4deg);
+  }
 
-@keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
+  50% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
