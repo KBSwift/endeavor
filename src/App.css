@@ -32,13 +32,40 @@
   color: #ffffff;
 }
 
-.navbar-nav .nav-link:focus, 
-.navbar-nav  {
+.navbar-nav .nav-link:focus,
+.navbar-nav {
   color: #ffffff;
-  
+
 }
 
 .nav-link:hover {
   scale: 110%;
-  color: #A8C5EB!important;
+  color: #A8C5EB !important;
+}
+
+#ai-button:hover {
+  scale: 105%;
+  animation: shaking 0.5s infinite;
+}
+
+@keyframes shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
