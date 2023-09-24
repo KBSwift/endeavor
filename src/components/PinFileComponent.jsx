@@ -50,7 +50,7 @@ const PinFileComponent = () => {
     return (
         <div className="card border-0 shadow-sm mt-4">
             <div className="card-body">
-                <h5 className="card-title">Add Image for Blog Post</h5>
+                <h5 className="card-title">Upload Images</h5>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="fileInput">Choose an image:</label>
                     <input

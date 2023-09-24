@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import getPinnedFiles from '../util/getPinnedFiles';
+import PinFileComponent from '../components/PinFileComponent'
 
 function ArtGallery() {
     const [files, setFiles] = useState([]);
@@ -15,6 +15,8 @@ function ArtGallery() {
     }, []);
 
     return (
+        <>
+        <PinFileComponent />
         <div className="container mt-5">
             <div className="row">
                 {files.map(file => (
@@ -29,6 +31,7 @@ function ArtGallery() {
                 ))}
             </div>
         </div>
+        </>
     );
 }
 

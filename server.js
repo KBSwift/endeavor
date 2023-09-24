@@ -83,6 +83,25 @@ app.post('/pinFileToServer', upload.fields([{ name: 'file' }, { name: 'image' }]
     }
 });
 
+// chatbot api call
+app.post('/ask', async (req, res) => {
+    try {
+        const response = await axios.post('https://api.openai.com/v2/engines/davinci/completions', {
+            prompt: req.body.question,
+            max_tokens: 150
+        }, {
+            headers: {
+                'Authorization': `Bearer YOUR_OPENAI_API_KEY`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        res.json({ answer: response.data.choices[0].text.trim() });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch response from OpenAI.' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

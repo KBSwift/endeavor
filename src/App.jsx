@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 import ContentListingPage from './components/ContentListingPage';
 import ContentDetailPage from './components/ContentDetailPage';
 import ArtGalleryPage from './components/ArtGalleryPage';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
                 <Route path="/create-content" element={<CreateContentPage />} />
                 <Route path="/art-gallery" element={<ArtGalleryPage />} />
+                <Route path="/chat-bot" element={<Chatbot />} />
 
             </Routes>
           </Router>
