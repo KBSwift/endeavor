@@ -4,23 +4,13 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
-                <a className="navbar-brand" href="/"><img src="src\assets\logo.png"></img><p style={{fontFamily: "cursive"}}>Inspire your thoughts</p></a>
-                <button
-                    // Add "toggler" for hamburger menu toggle as below instead of just navbar
-                    // className="navbar-toggler"
-                    className="navbar"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    {/* Use for creating responsive hamburger menu */}
-                    {/* <span className="navbar-toggler-icon"></span>  */}
-                </button>
+                <a className="navbar-brand" href="/">
+                    <img src="src\assets\logo.png" alt="Logo" style={{ height: '50px', maxWidth: '100%' }} />
+                    <p style={{ fontFamily: 'cursive' }}>Inspire your thoughts</p>
+                </a>
+
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav mx-auto">
                         <li className="nav-item">
                             <a className="nav-link" href="/">Home</a>
                         </li>
@@ -32,6 +22,10 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
+
+                <div className="ml-5">
+                <button className="btn btn-primary rounded-pill mx-2" style={{ backgroundColor: 'white', borderColor: 'blue', color: 'blue' }}>Log In</button>
+                <a href="/create-content" className="btn btn-success rounded-pill" style={{ backgroundColor: 'blue' }}>Start Writing</a>                </div>
             </div>
         </nav>
     );
