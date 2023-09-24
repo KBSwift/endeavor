@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -9,10 +8,9 @@ dotenv.config();
 const app = express();
 const PORT = 5000;
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
-// Add this route
 app.get('/testPinataAuth', async (req, res) => {
     try {
         const response = await axios.get('https://api.pinata.cloud/data/testAuthentication', {
@@ -24,7 +22,8 @@ app.get('/testPinataAuth', async (req, res) => {
 
         res.json(response.data);
     } catch (error) {
-        res.status(500).json({ success: false, message: 'Error testing Pinata Authentication', error });
+        console.error("Error testing Pinata Authentication:", error);
+        res.status(500).json({ success: false, message: 'Error testing Pinata Authentication' });
     }
 });
 
