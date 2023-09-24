@@ -85,20 +85,23 @@ app.post('/pinFileToServer', upload.fields([{ name: 'file' }, { name: 'image' }]
 
 // chatbot api call
 app.post('/ask', async (req, res) => {
+    const data = {
+        model: "gpt-3.5-turbo",
+        messages: req.body.messages
+    };
+
     try {
-        const response = await axios.post('https://api.openai.com/v2/engines/davinci/completions', {
-            prompt: req.body.question,
-            max_tokens: 150
-        }, {
+        const response = await axios.post('https://api.openai.com/v1/chat/completions', data, {
             headers: {
-                'Authorization': `Bearer YOUR_OPENAI_API_KEY`,
-                'Content-Type': 'application/json'
+                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
             }
         });
-
-        res.json({ answer: response.data.choices[0].text.trim() });
+        res.send(response.data);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch response from OpenAI.' });
+        res.status(500).send({ error: error.message });
     }
 });
 

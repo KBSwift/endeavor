@@ -10,6 +10,7 @@ import ContentDetailPage from './components/ContentDetailPage';
 import ArtGalleryPage from './components/ArtGalleryPage';
 import Chatbot from './components/Chatbot';
 import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <main>
-        <body className='d-flex flex-column min-vh-100'>
+      <div id="app">
+        <main className='main-content'>
           <Router>
             <Routes>
               <Route path="/" element={<LandingPage />} />
@@ -32,12 +33,9 @@ function App() {
 
             </Routes>
           </Router>
-        </body>
-      </main>
-      <footer>
+        </main>
         <Footer />
-      </footer>
-    </>
+      </div> </>
   );
 }
 
