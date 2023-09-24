@@ -17,23 +17,24 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <main>
-        <Router>
+      <div id="app">
+        <main className='main-content'>
+          <Router>
             <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog-posts" element={<ContentListingPage />} />
-                <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
-                <Route path="/create-content" element={<CreateContentPage />} />
-                <Route path="/art-gallery" element={<ArtGalleryPage />} />
-                <Route path="/ai-me" element={<Chatbot />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog-posts" element={<ContentListingPage />} />
+              <Route path="/blog-posts/detail/:id" element={<ContentDetailPage />} />
+              <Route path="/create-content" element={<CreateContentPage />} />
+              <Route path="/art-gallery" element={<ArtGalleryPage />} />
+              <Route path="/ai-me" element={<Chatbot />} />
 
             </Routes>
           </Router>
-      </main>
-      <Footer/>
-    </>
+        </main>
+        <Footer />
+      </div> </>
   );
 }
 
