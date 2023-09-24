@@ -35,22 +35,31 @@ app.get('/', (req, res) => {
 
 const upload = multer({ storage: multer.memoryStorage() }); // store the file in memory
 
-app.post('/pinFileToServer', upload.single('file'), async (req, res) => {
-    if (!req.file) {
+app.post('/pinFileToServer', upload.fields([{ name: 'file' }, { name: 'image' }]), async (req, res) => {
+    if (!req.files.file) {
         return res.status(400).send('No file uploaded');
     }
 
     const formData = new FormData();
-    formData.append('file', req.file.buffer, {
-        filename: req.file.originalname,
-        contentType: req.file.mimetype
+    formData.append('file', req.files.file[0].buffer, {
+        filename: req.files.file[0].originalname,
+        contentType: req.files.file[0].mimetype
     });
+
+    // Check and append the image if present
+    if (req.files.image) {
+        formData.append('image', req.files.image[0].buffer, {
+            filename: req.files.image[0].originalname,
+            contentType: req.files.image[0].mimetype
+        });
+    }
     
     const pinataMetadata = {
         name: 'BlogPostContent',
         keyvalues: {
-            author: 'AuthorName', // You can customize this
-            date: new Date().toISOString()
+            author: req.body.author || 'AuthorName', // Default to 'AuthorName' if no author provided
+            date: req.body.date || new Date().toISOString(), // Default to current date if none provided
+            tags: req.body.tags || '' // Default to empty string if no tags provided
         }
     };
     formData.append('pinataMetadata', JSON.stringify(pinataMetadata));
@@ -64,8 +73,8 @@ app.post('/pinFileToServer', upload.single('file'), async (req, res) => {
         const pinataResponse = await axios.post("https://api.pinata.cloud/pinning/pinFileToIPFS", formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
-                'Authorization': `Bearer ${process.env.PINATA_JWT}`
-            }
+                'pinata_api_key': `${process.env.PINATA_API_KEY}`,
+                'pinata_secret_api_key': `${process.env.PINATA_SECRET_API_KEY}`,            }
         });
         res.json(pinataResponse.data);
     } catch (error) {
