@@ -5,6 +5,7 @@ const PinFileComponent = () => {
     const jwtToken = import.meta.env.VITE_PINATA_JWT;
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewURL, setPreviewURL] = useState(null);
+    const [feedback, setFeedback] = useState(null);
 
     const onFileChange = event => {
         const file = event.target.files[0];
@@ -42,9 +43,19 @@ const PinFileComponent = () => {
                 }
             });
             console.log(res.data);
+            setFeedback("File uploaded successfully!");
+
+            // Alternatively, if you want to clear the preview and feedback after a certain time:
+            setTimeout(() => {
+                setPreviewURL(null);
+                setFeedback(null);
+            }, 10000); // Clear after 10 seconds
+
         } catch (error) {
             console.log(error);
+            setFeedback("Error uploading the file.");
         }
+
     };
 
     return (
@@ -70,6 +81,11 @@ const PinFileComponent = () => {
                         />
                     </div>
                 }
+                {feedback &&
+                    <div className="alert alert-info mt-3">
+                        {feedback}
+                    </div>
+                }
                 <button
                     onClick={pinFileToIPFS}
                     className="btn btn-primary"
@@ -78,6 +94,7 @@ const PinFileComponent = () => {
                     Pin File to IPFS
                 </button>
             </div>
+
         </div>
     );
 };
