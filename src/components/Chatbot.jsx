@@ -34,13 +34,13 @@ function Chatbot() {
             const currentMessages = [...messages, { text: userInput, type: 'user' }];
             setMessages(currentMessages);
             setUserInput('');
-    
+
             const response = await axios.post('http://localhost:5000/ask', {
                 messages: currentMessages.map(msg => ({ role: msg.type, content: msg.text }))
             });
-    
+
             const assistantMessage = response.data.choices[0].message.content;
-            
+
             setTypingContent(assistantMessage);
             setIsBotTyping(true);
             setTypingIndex(0);
