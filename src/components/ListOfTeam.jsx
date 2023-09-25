@@ -20,7 +20,7 @@ const ListOfTeam = () => {
         {
             name: "Kavin Moreno",
             role: "Full Stack Developer",
-            favoriteFood: "For now: Kansas City Burnt ends",
+            favoriteFood: "Kansas City beef burnt ends (for now)",
             responsibleFor: "Frontend, Backend, Middleend",
             image: "src/assets/kavin_moreno.jfif"
  
