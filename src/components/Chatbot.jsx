@@ -49,6 +49,13 @@ function Chatbot() {
         }
     };
 
+    const handleInputKeyDown = (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            handleSend();
+        }
+    }
+
     return (
         <div className="container mt-5">
             <div className="chatbox p-3 bg-light rounded">
@@ -79,6 +86,7 @@ function Chatbot() {
                         placeholder="Ask Aime something..."
                         value={userInput}
                         onChange={(e) => setUserInput(e.target.value)}
+                        onKeyDown={handleInputKeyDown}
                     />
                     <button className="btn btn-primary mt-2" onClick={handleSend}>Send</button>
                 </div>
