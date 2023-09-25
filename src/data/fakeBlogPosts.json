@@ -23,6 +23,22 @@
         "date": "2023-09-22",
         "tags": ["Virtual Reality", "Tech Trends", "Future"],
         "content": "Virtual Reality (VR) is changing how we interact with content and the world around us. From gaming to professional training, the potential applications of VR are vast and promising."
+      },
+      {
+        "id": 4,
+        "title": "The Future of AI",
+        "author": "Ben Smith",
+        "date": "2023-09-22",
+        "tags": ["AI", "Workforce", "Tech Trends"],
+        "content": "The future of AI holds amazing and terrifying potential. With the surge of multiple AI systems worker across a myriad industries are fearful about human replacement, while business owners embrace the possibilities for scale."
+      },
+      {
+        "id": 5,
+        "title": "The Augmented Reality Revolution",
+        "author": "Peter Piper",
+        "date": "2023-09-22",
+        "tags": ["Augmented Reality", "AI", "Digital Innovation"],
+        "content": "Augmented reality (AR for short) is rapidly changing how we experience the world, transitioning from a concept in science fiction to a game-changer across industries like healthcare, education, gaming, and retail. AR enhances surgical precision, makes learning engaging, immerses gamers in virtual worlds, and transforms shopping experiences. With wearable AR devices on the horizon, the line between the physical and virtual blurs even further. ARs rise signifies a pivotal moment, ushering in a future of limitless possibilities and reshaping our perception of reality."
       }
     ]
   }

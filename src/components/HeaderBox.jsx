@@ -22,7 +22,7 @@ function HeaderBox() {
                             💡 <i>Are you an artist or writer?</i> Join our community and showcase your talent to a global audience!
                         </p>
                         <div className="text-center mt-4">
-                            <a href="#link-to-browse-section" className="btn btn-primary">
+                            <a href="/blog-posts" className="btn btn-primary">
                                 Start Exploring Now
                             </a>
                         </div>
