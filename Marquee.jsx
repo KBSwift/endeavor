@@ -39,7 +39,7 @@ const Marquee = ({ text, speed = 2 }) => {
         fontWeight: 'bold', // Making the text bold
       }}
     >
-      <span style={{ paddingRight: '100%', paddingLeft: "50%" }}>{text}</span>
+      <span style={{ paddingRight: '85%', paddingLeft: "85%" }}>{text}</span>
       <span>{text}</span>
     </div>
   );
