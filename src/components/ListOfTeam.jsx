@@ -14,21 +14,21 @@ const ListOfTeam = () => {
             name: "Angela Mitchell",
             role: "Web Developer",
             favoriteFood: "Pasta",
-            responsibleFor: "Design",
+            responsibleFor: "Design and Frontend",
             image: "src/assets/angela_mitchell.jfif"
         },
         {
             name: "Kavin Moreno",
-            role: "Full-stack Developer",
-            favoriteFood: "Currently: Kansas City Burnt ends",
-            responsibleFor: "frontend, backend, middle end",
+            role: "Full Stack Developer",
+            favoriteFood: "For now: Kansas City Burnt ends",
+            responsibleFor: "Frontend, Backend, Middleend",
             image: "src/assets/kavin_moreno.jfif"
  
         },
         {
             name: "Elizabeth Beckerle",
-            role: "Fill-stack Developer",
-            favoriteFood: "Spagetti",
+            role: "Full Stack Developer",
+            favoriteFood: "Spagetti (code)",
             responsibleFor: "Frontend Development",
             image: "src/assets/EBpic.jpg"
 
