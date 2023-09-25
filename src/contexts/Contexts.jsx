@@ -10,7 +10,7 @@ export const PostsContext = createContext([
     title: 'The Impact of Artificial Intelligence on Healthcare',
     image: artificialIntelligence,
     altText: 'Artificial Intelligence',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore id placeat libero nulla! Provident expedita officia voluptates ut, maxime labore officiis eaque molestiae fugit fugiat enim ullam odio voluptate.'
   },
   {
     id: 1,
