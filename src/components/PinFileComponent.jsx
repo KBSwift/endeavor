@@ -59,9 +59,9 @@ const PinFileComponent = () => {
     };
 
     return (
-        <div className="card border-0 shadow-sm mt-4">
+        <div className="card border-0 shadow-sm mt-4" style={{paddingLeft: "30%", paddingRight:"30%"}}>
             <div className="card-body">
-                <h5 className="card-title">Upload Images</h5>
+                <h5 className="card-title" style={{textAlign:"center"}}>Upload Images</h5>
                 <div className="mb-3">
                     <label className="form-label" htmlFor="fileInput">Choose an image:</label>
                     <input
