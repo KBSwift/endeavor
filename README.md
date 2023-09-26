@@ -8,7 +8,9 @@
 -Sammie Rosado || sammierosado@gmail.com || GitHub: sammierosado
 <br />
 -Kavin Moreno || kavinmoreno@gmail.com || GitHub: KBSwift
+<br />
 -Angela Mitchell || anglarenmit@gmail.com || GitHub: amitchell05
+<br />
 -Elizabeth Beckerle || elzbthyorke@gmail.com || GitHub: ebeckerle
 
 
