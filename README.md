@@ -1,10 +1,11 @@
 ## Introducing a Hack Midwest 2023 Contender: Endeavor
-<br />
+<br /><br />
+
 ## How to run this project
 1. npm install in root directory for all dependencies
 2. Use <strong>npm run dev</strong> to start
 
-<br />
+<br /><br />
 
 ## Developed by
 -Sammie Rosado || sammierosado@gmail.com || GitHub: sammierosado
