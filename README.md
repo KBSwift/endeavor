@@ -30,7 +30,7 @@ By minting content into NFTs, we are not only providing a way to prove authentic
 
 <br /><br /><br />
 
-## Original Hackathon Ruleset
+## Original Hackathon Rules
 Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
 1. Clone this repository and rename to the name of your app or idea
 2. Make it **private**
