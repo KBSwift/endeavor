@@ -1,6 +1,7 @@
 ## Introducing a Hack Midwest 2023 Contender: Endeavor
 
-![LandingPage](https://github.com/KBSwift/endeavor/assets/15136449/3a53545a-8846-40cd-8c98-3fa6ac5353d9)
+![LandingPage](https://github.com/KBSwift/endeavor/assets/15136449/2036325f-1752-4216-92a1-791659220dcc)
+
 
 ## How to run this project
 1. npm install in root directory for all dependencies
