@@ -1,5 +1,6 @@
 ## Introducing a Hack Midwest 2023 Contender: Endeavor
-<br />
+
+![LandingPage](https://github.com/KBSwift/endeavor/assets/15136449/3a53545a-8846-40cd-8c98-3fa6ac5353d9)
 
 ## How to run this project
 1. npm install in root directory for all dependencies
@@ -28,7 +29,7 @@ Our app serves as a decentralized platform where users can effortlessly publish 
 
 By minting content into NFTs, we are not only providing a way to prove authenticity and ownership of digital assets but also opening doors for creators to potentially monetize their work in the burgeoning digital marketplace. At its core, our application champions the philosophy of decentralization, empowering users to take control of their content in the ever-evolving digital landscape.
 
-<br /><br /><br />
+<br />
 
 ## Original Hackathon Rules
 Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
@@ -37,7 +38,7 @@ Ensure you have reviewed the [Rules & FAQ](https://hackmidwest.com/#faq)
 3. Add pr@kcitp.com as a user
 4. Populate the Team, App & Challenges info below and update as needed
 
-<br /><br />
+<br />
 
 ## What challenges are you building for? SELECT ALL THAT APPLY
 *See hackmidwest.com/#prizes for challenge details*
