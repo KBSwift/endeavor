@@ -1,11 +1,11 @@
 ## Introducing a Hack Midwest 2023 Contender: Endeavor
-<br /><br />
+<br />
 
 ## How to run this project
 1. npm install in root directory for all dependencies
 2. Use <strong>npm run dev</strong> to start
 
-<br /><br />
+<br />
 
 ## Developed by
 -Sammie Rosado || sammierosado@gmail.com || GitHub: sammierosado
@@ -17,7 +17,7 @@
 -Elizabeth Beckerle || elzbthyorke@gmail.com || GitHub: ebeckerle
 
 
-<br /><br />
+<br />
 
 ## What is the name of this app?
 Endeavor is not just a name - it's a representation of our mission. We chose "Endeavor" because it embodies the spirit of persistent effort and the quest to achieve something greater. Through our platform, every user's contribution becomes a part of this collective endeavor towards a decentralized future. It's a testament to our commitment to pushing boundaries and ensuring that every piece of content gets the recognition and autonomy it truly deserves.
