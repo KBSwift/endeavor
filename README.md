@@ -4,6 +4,8 @@
 1. npm install in root directory for all dependencies
 2. Use <strong>npm run dev</strong> to start
 
+<br />
+
 ## Developed by
 -Sammie Rosado || sammierosado@gmail.com || GitHub: sammierosado
 <br />
